@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌤️  Weather </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="toggle">
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
+    <span>Dark Mode</span>
+    <label class="unit-switch">
+      <input type="checkbox" id="unit-toggle">
+      <span class="unit-slider"></span>
+      <span id="unit-label">°C</span>
+    </label>
+  </div>
+
+  <div class="container">
+    <h1 class="title">🌤️ Weather Forecast</h1>
+    <form id="weather-form">
+      <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off">
+      <ul id="suggestions"></ul>
+      <button type="button" id="use-location">📍 Use My Location</button>
+      <input type="submit" value="Search">
+    </form>
+
+    <div class="loader" id="loader"></div>
+    <div class="weather-data" id="weather-data" style="display: none;">
+      <div class="current-weather">
+        <div class="icon"></div>
+        <div class="temp"></div>
+        <div class="desc"></div>
+        <div class="details"></div>
+      </div>
+
+      <div class="forecast">
+        <h2>Weekly Forecast</h2>
+        <div class="weekly"></div>
+        <h2>Hourly Forecast</h2>
+        <div class="hourly-scroll">
+          <div class="hourly"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="sound" src="https://www.soundjay.com/buttons/beep-01a.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
